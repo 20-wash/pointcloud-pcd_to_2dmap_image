@@ -93,8 +93,10 @@ int main(int argc, char** argv) {
 
   std::cout << "input_pcd     :" << vm["input_pcd"].as<std::string>() << std::endl;
   std::cout << "dest_directory:" << vm["dest_directory"].as<std::string>() << std::endl;
-  std::cout << "resolution    :" << vm["resolution"].as<double>() << std::endl;
-  auto cloud = boost::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
+  std::cout << "resolution    :" << vm["resolution"].as<double>() << std::endl; 
+  // auto cloud = boost::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
+  // This line is changed as: 
+  auto cloud = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
   if(pcl::io::loadPCDFile(vm["input_pcd"].as<std::string>(), *cloud)) {
     std::cerr << "failed to open the input cloud" << std::endl;
     return 1;

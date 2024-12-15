@@ -21,3 +21,42 @@ pointcloud_to_2dmap:
 ```
 
 ![Screenshot_20200716_160239](https://user-images.githubusercontent.com/31344317/87637926-e7adfc00-c77d-11ea-8987-19dffe614fa5.png)
+
+
+## Navigate into Folder where you want to clone 
+```
+~$ cd /workspace/
+```
+## Clone this Repo into your workspace
+```
+~/workspace$ git clone https://github.com/20-wash/pointcloud-pcd_to_2dmap_image.git
+```
+
+## Navigate into Folder 
+```
+~/workspace$ cd pointcloud_to_2dmap/
+```
+
+## Build this repo
+```
+~/workspace/pointcloud_to_2dmap$ mkdir build  
+~/workspace/pointcloud_to_2dmap$ cd build 
+~/workspace/pointcloud_to_2dmap/build$$ cmake ..
+~/workspace/pointcloud_to_2dmap/build$ make
+```
+
+## Run the executable file 
+Input_pcd_file_path : ```/home/biswash/ws_livox/src/FAST_LIO/PCD/scans.pcd```
+
+Output_2D_map_path : ```/home/biswash/ws_livox/src/FAST_LIO/PCD/output```
+
+Command: ```pointcloud_to_2dmap Input_pcd_file_path Output_2D_map_path```
+
+```
+~/workspace/pointcloud_to_2dmap/build$ ./pointcloud_to_2dmap /home/biswash/ws_livox/src/FAST_LIO/PCD/scans.pcd /home/biswash/ws_livox/src/FAS/home/biswash/ws_livox/src/FAST_LIO/PCD/output
+
+```
+
+
+
+![alt text](map.png)
